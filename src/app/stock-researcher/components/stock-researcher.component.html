@@ -1,0 +1,8 @@
+<div class="form-card">
+  <h4>Enter the symbol of a stock to track.</h4>
+  <div class="form-group">
+    <input type="text" id="stockInput" [(ngModel)]="searchedStock" name="searchedStock"
+      placeholder="(i.e. AAPL, TSLA, GOOGL)">
+    <button type="submit" (click)="onStockSearch(searchedStock)">trackIt!</button>
+  </div>
+</div>
