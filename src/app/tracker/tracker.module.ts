@@ -1,20 +1,24 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { StockResearcherModule } from '../stock-researcher/stock-researcher.module';
-import { StockModule } from '../stock/stock.module';
-import { TrackerComponent } from './components/tracker.component';
+import { FormsModule } from '@angular/forms';
+import { StockResearcherComponent } from './components/stock-researcher/stock-researcher.component';
+import { StockComponent } from './components/stock/stock.component';
+import { TrackerListComponent } from './components/tracker-list/tracker-list.component';
 
 @NgModule({
   declarations: [
-    TrackerComponent
+    TrackerListComponent,
+    StockResearcherComponent,
+    StockComponent
   ],
   imports: [
     CommonModule,
-    StockResearcherModule,
-    StockModule
+    FormsModule
   ],
   exports: [
-    TrackerComponent
+    TrackerListComponent,
+    StockResearcherComponent,
+    StockComponent
   ]
 })
 export class TrackerModule { }

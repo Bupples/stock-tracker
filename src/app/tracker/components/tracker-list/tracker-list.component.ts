@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Stock } from '../../stock/components/stock.component';
-import { StockTrackerService } from './../../core/services/stock-tracker.service';
+import { StockTrackerService } from '../../../core/services/stock-tracker.service';
+import { Stock } from '../stock/stock.component';
 
 @Component({
-  selector: 'app-tracker',
-  templateUrl: './tracker.component.html',
-  styleUrls: ['./tracker.component.css']
+  selector: 'app-tracker-list',
+  templateUrl: './tracker-list.component.html',
+  styleUrls: ['./tracker-list.component.css']
 })
-export class TrackerComponent implements OnInit {
+export class TrackerListComponent implements OnInit {
 
   listStocks$!: Observable<Stock[]>;
 

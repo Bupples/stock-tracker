@@ -1,10 +1,10 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { TrackerComponent } from './tracker/components/tracker.component';
+import { TrackerListComponent } from './tracker/components/tracker-list/tracker-list.component';
 
 const routes: Routes = [
-  { path: 'sentiment', loadChildren: () => import('./stock-tracker.module').then(m => m.StockTrackerModule) },
-  { path: '', component: TrackerComponent }
+  { path: 'sentiment', loadChildren: () => import('./sentiment/sentiment.module').then(m => m.SentimentModule) },
+  { path: '', component: TrackerListComponent }
 ]
 
 @NgModule({

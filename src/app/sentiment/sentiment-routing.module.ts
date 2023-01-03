@@ -1,7 +1,9 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { SentimentComponent } from './components/sentiment.component';
 
 const routes: Routes = [
+  { path: ':symbol', component: SentimentComponent }
 ];
 
 @NgModule({
@@ -12,4 +14,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class StockTrackerRoutingModule { }
+export class SentimentRoutingModule { }
