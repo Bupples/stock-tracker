@@ -16,6 +16,7 @@ export class SentimentComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    // on init, find stock corresponding to the symbol to load sentiment page.
     const stockSymbol = this.route.snapshot.params['symbol'];
     this.stock$ = this.stockTrackerService.getStockBySymbol(stockSymbol);
   }

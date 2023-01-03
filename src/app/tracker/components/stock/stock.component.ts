@@ -13,13 +13,19 @@ export class StockComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
   }
 
+  /**
+   * Navigates to the specified sentiment route on click.
+   */
   public onViewSentimentDetail(): void {
     this.router.navigateByUrl(`sentiment/${this.stock.symbol}`)
   }
 
+  /**
+   * Raises an event when the 'delete' button is clicked to remove the stock.
+   */
   public onRemoveStock(symbol: string): void {
     this.symbol.emit(symbol);
   }

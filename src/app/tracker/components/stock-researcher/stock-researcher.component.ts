@@ -12,8 +12,13 @@ export class StockResearcherComponent implements OnInit {
 
   constructor() { }
 
-  public ngOnInit(): void { }
+  ngOnInit(): void { }
 
+  /**
+   * Raises an event when the user search a symbol.
+   *
+   * @param searchedStock stock to search.
+   */
   public onStockSearch(searchedStock: string): void {
     this.symbol.emit(searchedStock);
   }
