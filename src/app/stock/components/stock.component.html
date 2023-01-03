@@ -1,0 +1,24 @@
+<div class="stock-card">
+  <div class="card-header">
+    <h2>{{ stock.name }}</h2>
+    <button (click)='onRemoveStock(stock.symbol)' type='button' [id]="stock.symbol">X</button>
+  </div>
+  <h4>{{ stock.symbol }}</h4>
+  <div class="card-body">
+    <div>
+      <p>changeToday: {{ stock.percentChange }}%</p>
+      <p>currentPrice: {{ stock.currentPrice | currency: 'USD' }}</p>
+      <p>openingPrice: {{ stock.openingPrice | currency: 'USD' }}</p>
+      <p>highPrice: {{ stock.highPrice | currency: 'USD' }}</p>
+    </div>
+    <div *ngIf="stock.percentChange > 0 ; else trendDown">
+      <img src="assets/images/trendUp.png" alt="trendUp">
+    </div>
+    <ng-template #trendDown>
+      <div>
+        <img src="assets/images/trendDown.png" alt="trendDown">
+      </div>
+    </ng-template>
+  </div>
+  <button (click)="onViewSentimentDetail()">goToSentimentDetails!</button>
+</div>

@@ -1,0 +1,5 @@
+<app-stock-researcher (symbol)="receivedSymbol($event)"></app-stock-researcher>
+<button type="reset" (click)="onClearLocalStorage()">clearLocalStorage</button>
+<button type="reset" (click)="onViewLocalStorage()">viewLocalStorage</button>
+<app-stock *ngFor="let stock of listStocks$ | async" [stock]="stock"
+  (symbol)=" receivedRemoveInstruction($event)"></app-stock>

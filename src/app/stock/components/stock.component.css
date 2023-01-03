@@ -1,0 +1,29 @@
+.stock-card {
+  box-sizing: border-box;
+  width: 50%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: lightgray 4px 4px 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2,
+h4 {
+  margin: 0;
+}
+p {
+  font-weight: 300;
+  font-size: 16px;
+}
+img {
+  scale: 0.5;
+}

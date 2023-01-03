@@ -1,5 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { StockTrackerService } from './../../core/services/stock-tracker.service';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 
 
 @Component({
@@ -8,19 +7,17 @@ import { StockTrackerService } from './../../core/services/stock-tracker.service
   styleUrls: ['./stock-researcher.component.css']
 })
 export class StockResearcherComponent implements OnInit, OnDestroy {
-
+  @Output() symbol = new EventEmitter<string>();
   searchedStock!: string;
-  stockList!: string[];
 
-  constructor(private stockTrackerService: StockTrackerService) { }
+  constructor() { }
 
   public ngOnInit(): void { }
 
   public ngOnDestroy(): void {
-    this.stockTrackerService.clearStockSymbols();
   }
 
   public onStockSearch(searchedStock: string): void {
-    this.stockTrackerService.setStockSymbol(searchedStock);
+    this.symbol.emit(searchedStock);
   }
 }

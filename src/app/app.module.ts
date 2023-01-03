@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { StockResearcherModule } from './stock-researcher/stock-researcher.module';
+import { TrackerModule } from './tracker/tracker.module';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
@@ -14,7 +14,7 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    StockResearcherModule
+    TrackerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
