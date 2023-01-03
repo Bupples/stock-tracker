@@ -3,7 +3,7 @@
   <h4>{{ stock.symbol }}</h4>
   <div class="card-body">
     <div *ngFor="let lastStockSentiment of stock.lastStockSentiments">
-      <h5>{{ lastStockSentiment.month }} {{ lastStockSentiment.year }}</h5>
+      <h5>{{ lastStockSentiment.month }}.{{ lastStockSentiment.year }}</h5>
       <p>change: {{ lastStockSentiment.change }}</p>
       <p>mspr: {{ lastStockSentiment.mspr }}</p>
       <div *ngIf="lastStockSentiment.change > 0 ; else trendDown">
@@ -16,5 +16,5 @@
       </ng-template>
     </div>
   </div>
-  <button routerLink="">backToStockList!</button>
+  <button routerLink="" id="backBtn">backToStockList!</button>
 </div>

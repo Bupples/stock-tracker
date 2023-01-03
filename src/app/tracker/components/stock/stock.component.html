@@ -1,7 +1,7 @@
 <div class="stock-card">
   <div class="card-header">
     <h2>{{ stock.name }}</h2>
-    <button (click)='onRemoveStock(stock.symbol)' type='button' [id]="stock.symbol">X</button>
+    <button (click)='onRemoveStock(stock.symbol)' type='button' id="remove{{stock.symbol}}">X</button>
   </div>
   <h4>{{ stock.symbol }}</h4>
   <div class="card-body">
@@ -20,5 +20,5 @@
       </div>
     </ng-template>
   </div>
-  <button (click)="onViewSentimentDetail()">goToSentimentDetails!</button>
+  <button (click)="onViewSentimentDetail()" id="sentiment{{stock.symbol}}">goToSentimentDetails!</button>
 </div>

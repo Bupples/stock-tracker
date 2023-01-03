@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { SentimentComponent } from './components/sentiment.component';
 import { SentimentRoutingModule } from './sentiment-routing.module';
 
@@ -10,7 +9,6 @@ import { SentimentRoutingModule } from './sentiment-routing.module';
   ],
   imports: [
     CommonModule,
-    FormsModule,
     SentimentRoutingModule
   ],
   exports: [
